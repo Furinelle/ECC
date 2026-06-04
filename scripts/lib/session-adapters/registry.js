@@ -3,6 +3,7 @@
 const { createClaudeHistoryAdapter } = require('./claude-history');
 const { createDmuxTmuxAdapter } = require('./dmux-tmux');
 const { createCodexWorktreeAdapter } = require('./codex-worktree');
+const { createOpencodeAdapter } = require('./opencode');
 
 const TARGET_TYPE_TO_ADAPTER_ID = Object.freeze({
   plan: 'dmux-tmux',
@@ -11,7 +12,8 @@ const TARGET_TYPE_TO_ADAPTER_ID = Object.freeze({
   'claude-alias': 'claude-history',
   'session-file': 'claude-history',
   'codex-worktree': 'codex-worktree',
-  codex: 'codex-worktree'
+  codex: 'codex-worktree',
+  opencode: 'opencode'
 });
 
 function buildDefaultAdapterOptions(options, adapterId) {
@@ -34,7 +36,8 @@ function createDefaultAdapters(options = {}) {
   return [
     createClaudeHistoryAdapter(buildDefaultAdapterOptions(options, 'claude-history')),
     createDmuxTmuxAdapter(buildDefaultAdapterOptions(options, 'dmux-tmux')),
-    createCodexWorktreeAdapter(buildDefaultAdapterOptions(options, 'codex-worktree'))
+    createCodexWorktreeAdapter(buildDefaultAdapterOptions(options, 'codex-worktree')),
+    createOpencodeAdapter(buildDefaultAdapterOptions(options, 'opencode'))
   ];
 }
 
@@ -76,6 +79,13 @@ function normalizeStructuredTarget(target, context = {}) {
   if (type === 'codex-worktree' || type === 'codex') {
     return {
       target: `codex:${value}`,
+      context: nextContext
+    };
+  }
+
+  if (type === 'opencode') {
+    return {
+      target: `opencode:${value}`,
       context: nextContext
     };
   }
