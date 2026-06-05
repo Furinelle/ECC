@@ -1,0 +1,144 @@
+{
+  "name": "ecc-hermes-skills",
+  "description": "Hermes-compatible ECC skill pack generated from this repository.",
+  "generated_at": "2026-06-05T06:15:54.048Z",
+  "count": 34,
+  "skills": [
+    {
+      "name": "ecc-agent-introspection-debugging",
+      "source": ".agents/skills/agent-introspection-debugging"
+    },
+    {
+      "name": "ecc-agent-sort",
+      "source": ".agents/skills/agent-sort"
+    },
+    {
+      "name": "ecc-api-design",
+      "source": ".agents/skills/api-design"
+    },
+    {
+      "name": "ecc-article-writing",
+      "source": ".agents/skills/article-writing"
+    },
+    {
+      "name": "ecc-backend-patterns",
+      "source": ".agents/skills/backend-patterns"
+    },
+    {
+      "name": "ecc-brand-voice",
+      "source": ".agents/skills/brand-voice"
+    },
+    {
+      "name": "ecc-bun-runtime",
+      "source": ".agents/skills/bun-runtime"
+    },
+    {
+      "name": "ecc-coding-standards",
+      "source": ".agents/skills/coding-standards"
+    },
+    {
+      "name": "ecc-content-engine",
+      "source": ".agents/skills/content-engine"
+    },
+    {
+      "name": "ecc-crosspost",
+      "source": ".agents/skills/crosspost"
+    },
+    {
+      "name": "ecc-deep-research",
+      "source": ".agents/skills/deep-research"
+    },
+    {
+      "name": "ecc-dmux-workflows",
+      "source": ".agents/skills/dmux-workflows"
+    },
+    {
+      "name": "ecc-documentation-lookup",
+      "source": ".agents/skills/documentation-lookup"
+    },
+    {
+      "name": "ecc-e2e-testing",
+      "source": ".agents/skills/e2e-testing"
+    },
+    {
+      "name": "ecc-eval-harness",
+      "source": ".agents/skills/eval-harness"
+    },
+    {
+      "name": "ecc-everything-claude-code",
+      "source": ".agents/skills/everything-claude-code"
+    },
+    {
+      "name": "ecc-exa-search",
+      "source": ".agents/skills/exa-search"
+    },
+    {
+      "name": "ecc-fal-ai-media",
+      "source": ".agents/skills/fal-ai-media"
+    },
+    {
+      "name": "ecc-frontend-patterns",
+      "source": ".agents/skills/frontend-patterns"
+    },
+    {
+      "name": "ecc-frontend-slides",
+      "source": ".agents/skills/frontend-slides"
+    },
+    {
+      "name": "ecc-hermes-imports",
+      "source": "skills/hermes-imports"
+    },
+    {
+      "name": "ecc-investor-materials",
+      "source": ".agents/skills/investor-materials"
+    },
+    {
+      "name": "ecc-investor-outreach",
+      "source": ".agents/skills/investor-outreach"
+    },
+    {
+      "name": "ecc-market-research",
+      "source": ".agents/skills/market-research"
+    },
+    {
+      "name": "ecc-mcp-server-patterns",
+      "source": ".agents/skills/mcp-server-patterns"
+    },
+    {
+      "name": "ecc-mle-workflow",
+      "source": ".agents/skills/mle-workflow"
+    },
+    {
+      "name": "ecc-nextjs-turbopack",
+      "source": ".agents/skills/nextjs-turbopack"
+    },
+    {
+      "name": "ecc-product-capability",
+      "source": ".agents/skills/product-capability"
+    },
+    {
+      "name": "ecc-security-review",
+      "source": ".agents/skills/security-review"
+    },
+    {
+      "name": "ecc-strategic-compact",
+      "source": ".agents/skills/strategic-compact"
+    },
+    {
+      "name": "ecc-tdd-workflow",
+      "source": ".agents/skills/tdd-workflow"
+    },
+    {
+      "name": "ecc-verification-loop",
+      "source": ".agents/skills/verification-loop"
+    },
+    {
+      "name": "ecc-video-editing",
+      "source": ".agents/skills/video-editing"
+    },
+    {
+      "name": "ecc-x-api",
+      "source": ".agents/skills/x-api"
+    }
+  ]
+}
