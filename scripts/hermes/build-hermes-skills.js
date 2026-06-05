@@ -164,7 +164,6 @@ function build(args) {
   const manifest = {
     name: 'ecc-hermes-skills',
     description: 'Hermes-compatible ECC skill pack generated from this repository.',
-    generated_at: new Date().toISOString(),
     count: entries.length,
     skills: entries.map(entry => ({
       name: `ecc-${entry.slug}`,

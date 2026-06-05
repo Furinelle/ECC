@@ -1,0 +1,299 @@
+{
+  "mcp_servers": {
+    "jira": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "Jira issue tracking — search, create, update, comment, transition issues",
+      "command": "uvx",
+      "args": [
+        "mcp-atlassian==0.21.0"
+      ],
+      "env": {
+        "JIRA_URL": "${JIRA_URL}",
+        "JIRA_EMAIL": "${JIRA_EMAIL}",
+        "JIRA_API_TOKEN": "${JIRA_API_TOKEN}"
+      }
+    },
+    "github": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "GitHub operations - PRs, issues, repos",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      }
+    },
+    "firecrawl": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "Web scraping and crawling",
+      "command": "npx",
+      "args": [
+        "-y",
+        "firecrawl-mcp"
+      ],
+      "env": {
+        "FIRECRAWL_API_KEY": "${FIRECRAWL_API_KEY}"
+      }
+    },
+    "supabase": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "Supabase database operations",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@supabase/mcp-server-supabase@latest",
+        "--project-ref=YOUR_PROJECT_REF"
+      ]
+    },
+    "memory": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "Persistent memory across sessions",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-memory"
+      ]
+    },
+    "omega-memory": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "Persistent agent memory with semantic search, multi-agent coordination, and knowledge graphs — run via uvx (richer than the basic memory store)",
+      "command": "uvx",
+      "args": [
+        "omega-memory",
+        "serve"
+      ]
+    },
+    "longhand": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "Lossless Claude Code session history — indexes raw tool calls, file edits, and thinking blocks from ~/.claude/projects/*.jsonl into local SQLite + ChromaDB before Claude Code rotates them. Complements memory/omega-memory (synthesized) with verbatim recall. Install: pip install longhand && longhand setup",
+      "command": "longhand",
+      "args": [
+        "mcp-server"
+      ]
+    },
+    "sequential-thinking": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "Chain-of-thought reasoning",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    },
+    "vercel": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "Vercel deployments and projects",
+      "url": "https://mcp.vercel.com"
+    },
+    "railway": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "Railway deployments",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@railway/mcp-server"
+      ]
+    },
+    "cloudflare-docs": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "Cloudflare documentation search",
+      "url": "https://docs.mcp.cloudflare.com/mcp"
+    },
+    "cloudflare-workers-builds": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "Cloudflare Workers builds",
+      "url": "https://builds.mcp.cloudflare.com/mcp"
+    },
+    "cloudflare-workers-bindings": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "Cloudflare Workers bindings",
+      "url": "https://bindings.mcp.cloudflare.com/mcp"
+    },
+    "cloudflare-observability": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "Cloudflare observability/logs",
+      "url": "https://observability.mcp.cloudflare.com/mcp"
+    },
+    "clickhouse": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "ClickHouse analytics queries",
+      "url": "https://mcp.clickhouse.cloud/mcp"
+    },
+    "exa-web-search": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "Web search, research, and data ingestion via Exa API — prefer task-scoped use for broader research after GitHub search and primary docs",
+      "command": "npx",
+      "args": [
+        "-y",
+        "exa-mcp-server"
+      ],
+      "env": {
+        "EXA_API_KEY": "${EXA_API_KEY}"
+      }
+    },
+    "context7": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "Live documentation lookup — use with /docs command and documentation-lookup skill (resolve-library-id, query-docs).",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp@latest"
+      ]
+    },
+    "magic": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "Magic UI components",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@magicuidesign/mcp@latest"
+      ]
+    },
+    "filesystem": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "Filesystem operations (set your path)",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/path/to/your/projects"
+      ]
+    },
+    "playwright": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "Browser automation and testing via Playwright",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp",
+        "--browser",
+        "chrome"
+      ]
+    },
+    "fal-ai": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "AI image/video/audio generation via fal.ai models",
+      "command": "npx",
+      "args": [
+        "-y",
+        "fal-ai-mcp-server"
+      ],
+      "env": {
+        "FAL_KEY": "${FAL_KEY}"
+      }
+    },
+    "browserbase": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "Cloud browser sessions via Browserbase",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@browserbasehq/mcp-server-browserbase"
+      ],
+      "env": {
+        "BROWSERBASE_API_KEY": "${BROWSERBASE_API_KEY}"
+      }
+    },
+    "browser-use": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "AI browser agent for web tasks",
+      "url": "https://api.browser-use.com/mcp",
+      "headers": {
+        "x-browser-use-api-key": "${MCP_BROWSER_USE_X_BROWSER_USE_API_KEY}"
+      }
+    },
+    "devfleet": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "Multi-agent orchestration — dispatch parallel Claude Code agents in isolated worktrees. Plan projects, auto-chain missions, read structured reports. Repo: https://github.com/LEC-AI/claude-devfleet",
+      "url": "http://localhost:18801/mcp"
+    },
+    "token-optimizer": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "Token optimization for 95%+ context reduction via content deduplication and compression",
+      "command": "npx",
+      "args": [
+        "-y",
+        "token-optimizer-mcp"
+      ]
+    },
+    "laraplugins": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "Laravel plugin discovery — search packages by keyword, health score, Laravel/PHP version compatibility. Use with laravel-plugin-discovery skill.",
+      "url": "https://laraplugins.io/mcp/plugins"
+    },
+    "confluence": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "Confluence Cloud integration — search pages, retrieve content, explore spaces",
+      "command": "npx",
+      "args": [
+        "-y",
+        "confluence-mcp-server"
+      ],
+      "env": {
+        "CONFLUENCE_BASE_URL": "${CONFLUENCE_BASE_URL}",
+        "CONFLUENCE_EMAIL": "${CONFLUENCE_EMAIL}",
+        "CONFLUENCE_API_TOKEN": "${CONFLUENCE_API_TOKEN}"
+      }
+    },
+    "evalview": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "AI agent regression testing — snapshot behavior, detect regressions in tool calls and output quality. 8 tools: create_test, run_snapshot, run_check, list_tests, validate_skill, generate_skill_tests, run_skill_test, generate_visual_report. API key optional — deterministic checks (tool diff, output hash) work without it. Install: pip install \"evalview>=0.5,<1\"",
+      "command": "python3",
+      "args": [
+        "-m",
+        "evalview",
+        "mcp",
+        "serve"
+      ],
+      "env": {
+        "OPENAI_API_KEY": "${OPENAI_API_KEY}"
+      }
+    },
+    "squish": {
+      "enabled": false,
+      "source": "ECC",
+      "description": "Local-first persistent memory runtime for AI agents — MCP server for Claude Code, Cursor, OpenCode, Codex, Cline. Auto-captures context across sessions. 1-20ms recall, 283KB, no second LLM needed. Runs locally with SQLite. Supports cloud sync via Stripe checkout ($9-$99/mo). GitHub: https://github.com/michielhdoteth/squish | Docs: https://squishplugin.dev | (also available via local `squish run mcp`)",
+      "command": "npx",
+      "args": [
+        "-y",
+        "squish-memory"
+      ]
+    }
+  },
+  "_metadata": {
+    "name": "ecc-hermes-mcp",
+    "source": "mcp-configs/mcp-servers.json",
+    "count": 29,
+    "default_enabled": false
+  }
+}

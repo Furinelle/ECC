@@ -1,0 +1,78 @@
+{
+  "name": "ecc-hermes-commands",
+  "description": "ECC markdown commands adapted as Hermes skill slash commands.",
+  "mode": "core",
+  "count": 14,
+  "commands": [
+    {
+      "name": "ecc-cmd-build-fix",
+      "slash_command": "/ecc-cmd-build-fix",
+      "source": "commands/build-fix.md"
+    },
+    {
+      "name": "ecc-cmd-checkpoint",
+      "slash_command": "/ecc-cmd-checkpoint",
+      "source": "commands/checkpoint.md"
+    },
+    {
+      "name": "ecc-cmd-code-review",
+      "slash_command": "/ecc-cmd-code-review",
+      "source": "commands/code-review.md"
+    },
+    {
+      "name": "ecc-cmd-plan",
+      "slash_command": "/ecc-cmd-plan",
+      "source": "commands/plan.md"
+    },
+    {
+      "name": "ecc-cmd-pr",
+      "slash_command": "/ecc-cmd-pr",
+      "source": "commands/pr.md"
+    },
+    {
+      "name": "ecc-cmd-project-init",
+      "slash_command": "/ecc-cmd-project-init",
+      "source": "commands/project-init.md"
+    },
+    {
+      "name": "ecc-cmd-quality-gate",
+      "slash_command": "/ecc-cmd-quality-gate",
+      "source": "commands/quality-gate.md"
+    },
+    {
+      "name": "ecc-cmd-refactor-clean",
+      "slash_command": "/ecc-cmd-refactor-clean",
+      "source": "commands/refactor-clean.md"
+    },
+    {
+      "name": "ecc-cmd-resume-session",
+      "slash_command": "/ecc-cmd-resume-session",
+      "source": "commands/resume-session.md"
+    },
+    {
+      "name": "ecc-cmd-review-pr",
+      "slash_command": "/ecc-cmd-review-pr",
+      "source": "commands/review-pr.md"
+    },
+    {
+      "name": "ecc-cmd-save-session",
+      "slash_command": "/ecc-cmd-save-session",
+      "source": "commands/save-session.md"
+    },
+    {
+      "name": "ecc-cmd-security-scan",
+      "slash_command": "/ecc-cmd-security-scan",
+      "source": "commands/security-scan.md"
+    },
+    {
+      "name": "ecc-cmd-test-coverage",
+      "slash_command": "/ecc-cmd-test-coverage",
+      "source": "commands/test-coverage.md"
+    },
+    {
+      "name": "ecc-cmd-update-docs",
+      "slash_command": "/ecc-cmd-update-docs",
+      "source": "commands/update-docs.md"
+    }
+  ]
+}

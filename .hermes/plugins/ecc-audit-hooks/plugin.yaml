@@ -1,0 +1,11 @@
+name: ecc-audit-hooks
+version: 0.1.0
+description: "Privacy-preserving ECC activity audit hooks for Hermes. Records event metadata without command, prompt, response, or file contents."
+author: ECC Hermes Adapter
+kind: standalone
+hooks:
+  - on_session_start
+  - on_session_end
+  - post_tool_call
+  - pre_approval_request
+  - post_approval_response
